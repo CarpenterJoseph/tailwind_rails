@@ -13,13 +13,11 @@
   </fl-button>
 </flex-row-evenly>
 
-<p>Hello world</p>
-
-<%= @users.each do |user| %>
-  <%= user.username %>
+<% @users.each do |user| %>
+  <p><%= user.username %></p>
 <% end %>
 
-<%= form_with url: "/", method: :post do |form| %>
+<%= form_with url: "/", method: :post, builder: ApplicationForm do |form| %>
   <%= form.text_field :username %>
-  <%= form.submit "Post" %>
+  <%= form.submit 'test' %>
 <% end %>

@@ -4,6 +4,6 @@ class DashboardController < ApplicationController
   end
 
   def create
-    User.create(username: params[:username])
+    User.create(username: params[:username]) unless params[:username].blank?
   end
 end
