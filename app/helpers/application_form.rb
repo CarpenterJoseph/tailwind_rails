@@ -15,8 +15,16 @@ class ApplicationForm < ActionView::Helpers::FormBuilder
     super
   end
 
+  def label(method, text = nil, options = {}, &block)
+    classes = 'm-2 mb-0'
+
+    add_classes(options, classes)
+
+    super
+  end
+
   def submit(value, options = {})
-    classes = 'bg-red-300 p-4 self-end m-2'
+    classes = 'bg-red-300 p-4 self-end m-2 rounded-md'
 
     add_classes(options, classes)
 
