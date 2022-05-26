@@ -1,15 +1,15 @@
 import ApplicationElement from "./_ApplicationElement";
 
-export default class FLButton extends ApplicationElement {
+export default class FlexRowEvenly extends ApplicationElement {
     constructor() {
         super();
     }
 
     element() {
-        return 'button'
+        return 'div'
     }
 
     classes() {
-        return 'p-4 br-2 bg-red-300 rounded-md'
+        return 'flex flex-1 flex-row justify-evenly'
     }
 }

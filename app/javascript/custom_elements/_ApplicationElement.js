@@ -8,8 +8,6 @@ export default class ApplicationElement extends HTMLElement {
         this.classes().split(' ').forEach(style => {
             replaceElement.classList.add(style)
         })
-        
-        
 
         this.replaceWith(replaceElement)
     }

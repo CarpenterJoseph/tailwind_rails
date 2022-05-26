@@ -1,15 +1,25 @@
-<p>test</p>
-<p class="mt-8">test</p>
-<p class="mt-4">tes4</p>
-<fl-button>
-  <p class="">test</p>
-</fl-button>
-<fl-button>
-  <p class="">test</p>
-</fl-button>
-<fl-button>
-  <p class="">test</p>
-</fl-button>
-<fl-button>
-  <p class="">test</p>
-</fl-button>
+<flex-row-evenly>
+  <fl-button>
+    Hello
+  </fl-button>
+  <fl-button>
+    Buddy
+  </fl-button>
+  <fl-button>
+    How
+  </fl-button>
+  <fl-button>
+    Are You
+  </fl-button>
+</flex-row-evenly>
+
+<p>Hello world</p>
+
+<%= @users.each do |user| %>
+  <%= user.username %>
+<% end %>
+
+<%= form_with url: "/", method: :post do |form| %>
+  <%= form.text_field :username %>
+  <%= form.submit "Post" %>
+<% end %>

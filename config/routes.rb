@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   root 'dashboard#index'
+  post '/', to: 'dashboard#create'
 end
