@@ -15,8 +15,24 @@ class ApplicationForm < ActionView::Helpers::FormBuilder
     super
   end
 
+  def password_field(value, options = {})
+    classes = 'bg-green-400 flex flex-col m-2'
+
+    add_classes(options, classes)
+
+    super
+  end
+
+  def header(method, text = nil, options = {}, &block)
+    classes = 'mx-2 text-purple-800 text-2xl text-center'
+
+    add_classes(options, classes)
+
+    label(method, text, options, &block)
+  end
+
   def label(method, text = nil, options = {}, &block)
-    classes = 'm-2 mb-0'
+    classes = 'mx-2'
 
     add_classes(options, classes)
 
